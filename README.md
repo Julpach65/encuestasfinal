@@ -1,8 +1,6 @@
-# ENCUESTASFINAL
+# ENCUESTAS FINAL
 
-Aplicacion Android desarrollada en Kotlin como proyecto de la materia Desarrollo de Aplicaciones Moviles, correspondiente al tercer corte del cuarto cuatrimestre en la Universidad Politecnica de Sinaloa (UPSIN).
-
-La aplicacion demuestra la integracion de una base de datos en la nube mediante Supabase y el uso de inteligencia artificial generativa mediante la API de Google Gemini, dentro de una arquitectura MVVM con repositorios desacoplados.
+Aplicacion Android desarrollada en Kotlin La aplicacion demuestra la integracion de una base de datos en la nube mediante Supabase y el uso de inteligencia artificial generativa mediante la API de Google Gemini, dentro de una arquitectura MVVM con repositorios desacoplados.
 
 ---
 
@@ -21,7 +19,6 @@ La app presenta tres modulos principales accesibles desde la pantalla de inicio:
 ## Tecnologias utilizadas
 
 | Tecnologia | Version | Proposito |
-|---|---|---|
 | Kotlin | 1.9.24 | Lenguaje de programacion principal |
 | Android SDK | compileSdk 36 / minSdk 28 | Plataforma de destino |
 | Supabase Kotlin (BOM) | 2.5.2 | Cliente oficial de Supabase para Android |
@@ -33,39 +30,11 @@ La app presenta tres modulos principales accesibles desde la pantalla de inicio:
 | AndroidX Lifecycle (ViewModel + LiveData) | — | Patron MVVM y observacion de estado |
 | ConstraintLayout | — | Estructura de interfaces de usuario |
 
----
 
-## Arquitectura del proyecto
-
-El proyecto sigue el patron **MVVM (Model-View-ViewModel)** con una capa de repositorios para desacoplar el acceso a datos de la logica de presentacion.
-
-```
-com.example.practica7
-|
-|-- MainActivity.kt                  (Pantalla de inicio, navegacion)
-|-- supaBaseActivity1.kt             (Pantalla CRUD de usuarios)
-|-- supaBaseActivity2.kt             (Pantalla de usuario seleccionado)
-|-- geminiActivity.kt                (Pantalla de integracion con Gemini AI)
-|
-|-- SharedViewModel.kt               (ViewModel compartido entre Activities)
-|-- AppViewModelStore.kt             (Singleton para compartir el ViewModel)
-|
-|-- models/
-|   |-- User.kt                      (Modelo de datos para la tabla Usuarios)
-|   |-- GeminiModels.kt              (Modelos para la API de Gemini)
-|
-|-- providers/
-|   |-- HttpProvider.kt              (Singleton del cliente HTTP Ktor)
-|
-|-- repositories/
-    |-- SupabaseProvider.kt          (Singleton del cliente Supabase)
-    |-- UserRepository.kt            (Operaciones CRUD sobre la tabla Usuarios)
-    |-- GeminiRepository.kt          (Llamadas a la API de Gemini)
-```
 
 ### Flujo de datos
 
-```
+
 Vista (Activity)
     |__ ViewModel (SharedViewModel) -> UserRepository -> SupabaseProvider -> Supabase Cloud
     |__ GeminiRepository -> HttpProvider (Ktor) -> Gemini API
@@ -102,7 +71,6 @@ Puedes encontrar ambos valores en el panel de tu proyecto en Supabase:
 Ademas, asegurate de que tu proyecto de Supabase tenga una tabla llamada `Usuarios` con las siguientes columnas:
 
 | Columna | Tipo | Notas |
-|---|---|---|
 | id | bigint | Clave primaria, generada automaticamente |
 | user | text | Nombre de usuario |
 | password | text | Contrasena |
@@ -190,11 +158,9 @@ Carga automaticamente la lista de usuarios al iniciarse. Al presionar el boton M
 ## Autor
 
 **Julian Pacheco**
-Estudiante de Ingenieria en TI — Universidad Politecnica de Sinaloa
-Cuarto cuatrimestre — Desarrollo de Aplicaciones Moviles
+Estudiante de Ingenieria en TI
 
 ---
 
-## Licencia
 
-Este proyecto fue desarrollado con fines academicos.
+
