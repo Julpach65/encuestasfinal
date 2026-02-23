@@ -1,5 +1,3 @@
-# CINEPOLIS SURVEY APP
-
 Aplicacion Android desarrollada en Kotlin La aplicacion demuestra la integracion de una base de datos en la nube mediante Supabase y el uso de inteligencia artificial generativa mediante la API de Google Gemini, dentro de una arquitectura MVVM con repositorios desacoplados.
 
 ---
@@ -161,6 +159,7 @@ Carga automaticamente la lista de usuarios al iniciarse. Al presionar el boton M
 Estudiante de Ingenieria en TI
 
 ---
+
 
 
 
